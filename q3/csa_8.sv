@@ -9,15 +9,15 @@ module csa_8 (
 logic [3:0] sum1;
 logic c0;
 
-adder_4 adder1(.A(a[3:0]), .B(b[3:0]), .cin(0), .sum(sum1), .carry(c0));
+adder_4 adder1(.A(a[3:0]), .B(b[3:0]), .cin(cin), .sum(sum1), .cout(c0));
 
 
 logic [3:0] sum2, sum3;
 logic c7_2, c7_3;
 
 //the two parallel adders that compute with both carry 0 and 1
-adder_4 adder2(.A(a[7:4]), .B(b[7:4]), .cin(1'b0), .sum(sum2), .carry(c7_2));
-adder_4 adder3(.A(a[7:4]), .B(b[7:4]), .cin(1'b1), .sum(sum3), .carry(c7_3));
+adder_4 adder2(.A(a[7:4]), .B(b[7:4]), .cin(1'b0), .sum(sum2), .cout(c7_2));
+adder_4 adder3(.A(a[7:4]), .B(b[7:4]), .cin(1'b1), .sum(sum3), .cout(c7_3));
 
 logic [3:0] s_result;
 

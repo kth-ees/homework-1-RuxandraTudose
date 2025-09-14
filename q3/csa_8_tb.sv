@@ -7,7 +7,7 @@ module csa_8_tb;
   logic cin;
   logic cout;
 
-  csa_8_tb uut (
+  csa_8 uut (
     .a(a),
     .b(b),
     .sum(sum),
@@ -15,14 +15,22 @@ module csa_8_tb;
     .cout(cout)
   );
 
-  initial begin 
+  /* initial begin 
     for(int i = 0; i < 5; i ++) begin
         a = $urandom;
         b = $urandom;
         #10ns;
     end    
 
-  end
+  end*/
+
+  initial begin
+        a = 8'd33;
+        b = 8'd100;
+        cin = 1'b0;
+  end  
+endmodule  
+
   
   
-endmodule
+
