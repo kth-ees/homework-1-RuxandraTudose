@@ -1,7 +1,8 @@
 module adder_4 (
   input logic [3:0] A, B,
+  input logic cin,
   output logic [3:0] sum,
-  output logic carry
+  output logic cout
 );
-  assign {carry, sum} = A+B;
+  assign {cout, sum} = A+B+cin;
 endmodule

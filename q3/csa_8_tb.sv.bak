@@ -3,8 +3,8 @@ module csa_8_tb;
   // Inputs
   logic [7:0] a;
   logic [7:0] b;
-  logic [7:0] sum;
-  logic cin;
+  logic [7:0] sum,
+  logic cin
   logic cout;
 
   csa_8_tb uut (
@@ -14,6 +14,7 @@ module csa_8_tb;
     .cin(cin),
     .cout(cout)
   );
+
 
   initial begin 
     for(int i = 0; i < 5; i ++) begin
