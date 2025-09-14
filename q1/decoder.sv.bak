@@ -3,11 +3,11 @@ module decoder (
   output logic [15:0] one_hot
 );
 
-//use parametrized description
+//to solve the design we will use parametrized description
 
-always_comb begin //concurrent process for combinational logic 
-  one_hot = 16'h0000; //ouput rule also used to initialize the output 
-  one_hot[binary] = 1'b1;
+always_comb begin 
+  one_hot = 16'h0000; //ouput rule also used to initialize the all possible output values to zero 
+  one_hot[binary] = 1'b1; //we then use the decoder to change one bit only depending on the input 
 end  
 
 // very tidious and not efficient to write like this 

@@ -3,13 +3,14 @@ module count_1 (
   output logic [2:0] out
 );
 
-//Version 1 of the solution
 always_comb begin 
   out = 3'b000;
   for(int i = 0; i <=3; i++) begin 
     if(a[i] == 1'b1)
-      out = out + 1;  
+      out = out + 1;
   end
+end
+
 end 
 
 endmodule

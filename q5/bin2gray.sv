@@ -5,4 +5,8 @@ module bin2gray (
   // …
   // Add your description here
   // …
+
+
+  //use 4 MUXES - control singnal Binary values 
+  //connect the muxes to the GREY code values 
 endmodule

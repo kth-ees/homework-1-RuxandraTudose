@@ -19,6 +19,5 @@ module bin2bcd_tb;
   #10ns; //delay 
   binary = 4'b1001;
   #10ns; //delay 
-  end
 
 endmodule

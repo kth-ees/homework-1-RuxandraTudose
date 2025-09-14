@@ -7,11 +7,11 @@ module bin2bcd (
 
 //Version 1 - use 5 16:1 MUXES; each column is the logic input of the MUX and the desire number for the BSC conversion is the MUX select signals that are the same for all MUXES
 
-assign N = 16'b1010101010101010; //column BCD 1
-assign M = 16'b0011000011001100; //column BCD 2
-assign P = 16'b1100000011110000; //column BCD 4
-assign R = 16'b0000001100000000; //column BCD 8 
-assign Q = 16'b1111110000000000; //column Carry 
+assign N = 16'b1010101010101010;
+assign M = 16'b0011000011001100;
+assign P = 16'b1100000011110000;
+assign R = 16'b0000001100000000;
+assign Q = 16'b1111110000000000;
 
 assign bcd[0] = N[binary];
 assign bcd[1] = M[binary];
