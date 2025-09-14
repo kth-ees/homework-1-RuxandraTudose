@@ -6,5 +6,16 @@ module bin2gray_tb;
   // Outputs
   logic [3:0] gray;
 
-  // complete
+  bin2gray uut (
+    .binary(binary), 
+    .gray(gray)
+  );
+
+  initial begin 
+    for (int i = 0; i < 16; i++) begin
+      binary = i;
+      #20ns;
+    end 
+
+  end
 endmodule
